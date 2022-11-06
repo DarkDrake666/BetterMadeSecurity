@@ -31,7 +31,6 @@ if not loadstring or not getgenv() or not hookfunction or not hookmetamethod or 
 end
 
 if getgenv().LOADED_BETTER_MADE_SECURITY and getgenv().LOADED_BETTER_MADE_SECURITY == true then
-    MakeNotification("Security", "BetterMadeSecurity is already loaded!")
     return AlreadyLoaded
 end
 
