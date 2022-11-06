@@ -1,5 +1,13 @@
 --[[
-Please read https://github.com/DarkDrake666/BetterMadeSecurity/blob/MadeByMe/README.md for how to use.
+local Settings = {
+    BlockScriptLogging = true,
+    HideUsernameFromScripts = true,
+    BlockScriptKicks = true,
+    BlockGameKicks = true,
+    ConfirmScriptFileMaking = true, -- this could break scripts as it uses a function that yields.
+    ConfirmScriptFileDeleting = true, -- this could break scripts as it uses a function that yields.
+    ConfirmScriptFileAppending = true -- this could break scripts as it uses a function that yields.
+}
 ]]
 
 local v1 = {}
@@ -88,17 +96,20 @@ v1.fire = function(t1)
         if stopped == true then
             return Old(Self, ...)
         end
-        if not checkcaller() and not t1[4] == true then
-            return Old(Self, ...)
-        end
-        if checkcaller() and not t1[3] == true then
-            return Old(Self, ...)
-        end
         local NCM = string.lower(tostring(getnamecallmethod()))
         local LocalPlayer = game:GetService("Players").LocalPlayer
         local args = {...}
         if Self == LocalPlayer and NCM == "kick" then
-           return nil
+            if not checkcaller() and t1[4] then
+                return nil
+            end
+            if checkcaller() and t1[3] then
+                return nil
+            end
+        elseif Self == game and not checkcaller() and t1[1] == true then
+            if NCM == "httppost" or NCM == "httppostasync" or NCM == "request" or NCM == "requestasync" then
+                return nil
+            end
         end
         return Old(Self, ...)
     end))
