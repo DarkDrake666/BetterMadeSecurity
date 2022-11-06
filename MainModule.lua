@@ -1,5 +1,5 @@
 --[[
-Please read https://github.com/DarkDrake666/BetterMadeSecurity
+Please read https://github.com/DarkDrake666/BetterMadeSecurity/blob/MadeByMe/README.md for how to use.
 ]]
 
 local v1 = {}
