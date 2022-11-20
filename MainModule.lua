@@ -1,16 +1,3 @@
---[[
-local Settings = {
-    BlockScriptLogging = true,
-    HideUsernameFromScripts = true,
-    BlockScriptKicks = true,
-    BlockGameKicks = true,
-    BlockScriptChatRequests = true,
-    ConfirmScriptFileMaking = true, -- this could break scripts as it uses a function that yields.
-    ConfirmScriptFileDeleting = true, -- this could break scripts as it uses a function that yields.
-    ConfirmScriptFileAppending = true -- this could break scripts as it uses a function that yields.
-}
-]]--
-
 local v1 = {}
 
 local Notification = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
