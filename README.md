@@ -3,7 +3,7 @@ Currently in **BETA**.
 
 ## Booting BetterMadeSecurity
 ```lua
-local BMS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/BetterMadeSecurity/MadeByMe/MainModule.lua"))()
+local BMS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/BetterSecurity/MadeByMe/MainModule.lua"))()
 ```
 
 
