@@ -15,6 +15,7 @@ local Settings = {
     HideUsernameFromScripts = true;
     BlockScriptKicks = true;
     BlockGameKicks = true;
+    BlockScriptChatRequests = true; -- this stops scripts from purposely trying to ban your account using chat.
     ConfirmScriptFileMaking = false; -- this could break scripts as it uses a function that yields.
     ConfirmScriptFileDeleting = false; -- this could break scripts as it uses a function that yields.
     ConfirmScriptFileAppending = false; -- this could break scripts as it uses a function that yields.
