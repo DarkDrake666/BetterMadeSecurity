@@ -1,5 +1,5 @@
 # BetterMadeSecurity
-Idea by synn#8447
+Currently in **BETA**.
 
 ## Booting BetterMadeSecurity
 ```lua
