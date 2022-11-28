@@ -90,7 +90,7 @@ v1.fire = function(t1)
         local args = {...}
         Self = args[1]
         if stopped == true then
-            return Old(args)
+            return Old(...)
         end
         local NCM = string.lower(tostring(getnamecallmethod()))
         local LocalPlayer = game:GetService("Players").LocalPlayer
