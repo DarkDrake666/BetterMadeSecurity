@@ -86,13 +86,14 @@ v1.fire = function(t1)
             return Old(Self, Key)
         end))
     end
-    local Old; Old = hookmetamethod(game, "__namecall", newcclosure(function(Self, ...)
+    local Old; Old = hookmetamethod(game, "__namecall", newcclosure(function(...)
+        local args = {...}
+        Self = args[1]
         if stopped == true then
-            return Old(Self, ...)
+            return Old(args)
         end
         local NCM = string.lower(tostring(getnamecallmethod()))
         local LocalPlayer = game:GetService("Players").LocalPlayer
-        local args = {...}
         if checkcaller() and Self == ChatEvent and (t1.BlockScriptChatRequests and t1.BlockScriptChatRequests == true) and NCM == "fireserver" then
             print("Your script sent a logging request to: \n"..args.Url.."\nUsing "..args.Method)
             MakeNotification("Chat Attempt", "Your script attempted to make a chat request. Message has been printed.")
@@ -110,7 +111,7 @@ v1.fire = function(t1)
                 return nil
             end
         end
-        return Old(Self, ...)
+        return Old(...)
     end))
     if t1.ConfirmScriptFileMaking and t1.ConfirmScriptFileMaking == true then
         local Old; Old = hookfunction(makefolder, newcclosure(function(...)
