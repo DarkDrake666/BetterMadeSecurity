@@ -11,14 +11,17 @@ local BMS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake
 ## Activating
 ```lua
 local Settings = {
-    BlockScriptLogging = true;
-    HideUsernameFromScripts = true;
-    BlockScriptKicks = true;
-    BlockGameKicks = true;
-    BlockScriptChatRequests = true; -- this stops scripts from purposely trying to ban your account using chat.
-    ConfirmScriptFileMaking = false; -- this could break scripts as it uses a function that yields.
-    ConfirmScriptFileDeleting = false; -- this could break scripts as it uses a function that yields.
-    ConfirmScriptFileAppending = false; -- this could break scripts as it uses a function that yields.
+    BlockScriptLogging = true,
+    HideUsernameFromScripts = true,
+    BlockScriptKicks = true,
+    BlockGameKicks = true,
+    BlockScriptChatRequests = true,
+    
+    -- BROKEN: 
+    
+    ConfirmScriptFileMaking = false, -- this could break a little amount of scripts as it uses a function that yields.
+    ConfirmScriptFileDeleting = false, -- this could break a little amount of scripts as it uses a function that yields.
+    ConfirmScriptFileAppending = false -- this could break a little amount of scripts as it uses a function that yields.
 }
 
 BMS.fire(Settings)
