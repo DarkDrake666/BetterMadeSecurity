@@ -1,6 +1,10 @@
 # BetterMadeSecurity
 Currently in **v1.1.0**.
 
+## Updates
+
+https://github.com/DarkDrake666/BetterSecurity/commits/MadeByMe/MainModule.lua
+
 ## Booting BetterMadeSecurity
 ```lua
 local BMS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DarkDrake666/BetterSecurity/MadeByMe/MainModule.lua"))()
