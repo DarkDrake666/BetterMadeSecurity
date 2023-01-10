@@ -1,5 +1,5 @@
 # BetterMadeSecurity
-Currently in **BETA (v1.0.2)**.
+Currently in **v1.1.0**.
 
 ## Booting BetterMadeSecurity
 ```lua
